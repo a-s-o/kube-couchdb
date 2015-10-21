@@ -1,0 +1,48 @@
+{
+  "name": "kube-couchdb",
+  "version": "1.0.0",
+  "description": " CouchDB microservice for your kube cluster using Docker ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "setup": "node tasks/setup",
+    "postinstall": "npm run setup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "exit-hook": "^1.1.1",
+    "lodash": "^3.10.1",
+    "shelljs": "^0.5.3"
+  },
+  "kube": {
+    "inputs": [],
+    "outputs": [
+      "COUCH_SERVICE_HOST",
+      "COUCH_SERVICE_PORT"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-s-o/kube-couchdb.git"
+  },
+  "keywords": [
+    "kube",
+    "node.js",
+    "node",
+    "microservices",
+    "micro",
+    "service",
+    "docker",
+    "container",
+    "cluster",
+    "couch",
+    "couchdb"
+  ],
+  "author": "Amandeep",
+  "license": "MIT",
+  "homepage": "https://github.com/a-s-o/kube-couchdb#readme",
+  "bugs": {
+    "url": "https://github.com/a-s-o/kube-couchdb/issues"
+  }
+}
